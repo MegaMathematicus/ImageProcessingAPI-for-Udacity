@@ -2,28 +2,33 @@
   "name": "udacity",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/index.js",
+  "main": "./build/app.js",
   "scripts": {
-    "prettier": "prettier --config .prettierrc src/**/*.js --write",
-    "eslint": "eslint src/**/*.js",
+    "prettier": "prettier --config .prettierrc src/**/*.ts --write",
+    "eslint": "eslint src/**/*.ts",
     "build": "npx tsc",
     "jasmine": "jasmine",
-    "test": "npm run build && npm run jasmine"
+    "start": "node build/app.js",
+    "test": "npm run build && npm run jasmine",
+    "orient": "npm run prettier && npm run eslint",
+    "go": "npm run build && npm run start"
   },
   "author": "Abdulrahman Badawy",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.1",
     "express": "^4.18.2",
     "jasmine": "^4.5.0",
     "jasmine-spec-reporter": "^7.0.0",
-    "node-fetch": "^3.2.10",
     "nodemon": "^2.0.20",
-    "sharp": "^0.31.2"
+    "sharp": "^0.31.2",
+    "supertest": "^6.3.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.14",
     "@types/jasmine": "^4.3.0",
     "@types/node": "^18.11.9",
+    "@types/sharp": "^0.31.0",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "eslint": "^8.28.0",
