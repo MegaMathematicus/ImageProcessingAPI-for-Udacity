@@ -77,14 +77,11 @@ describe('Testeng processing', function () {
             console.log('Done Processing');
         });
     });
-    it('finds if the image is processed', function () { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            setTimeout(function () {
-                expect(fs_1.default.existsSync('media/thumb/abcd100x100.jpg')).toBeTrue();
-            }, 3000);
-            return [2 /*return*/];
-        });
-    }); });
+    it('finds if the image is processed', function () {
+        setTimeout(function () {
+            expect(fs_1.default.existsSync('media/thumb/abcd100x100.jpg')).toBeTrue();
+        }, 4000);
+    });
     afterAll(function () {
         fs_1.default.unlink('media/original/abcd.jpg', function () {
             console.log('Test media input deleted');

@@ -5,7 +5,7 @@ function wait(pth: string, call: () => void) {
 	if (fs.existsSync(pth)) {
 		setTimeout(call, 100);
 	} else {
-		setTimeout(wait, 100, pth, call);
+		setTimeout(wait, 2000, pth, call);
 	}
 }
 

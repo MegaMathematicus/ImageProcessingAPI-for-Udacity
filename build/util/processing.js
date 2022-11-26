@@ -10,7 +10,7 @@ function wait(pth, call) {
         setTimeout(call, 100);
     }
     else {
-        setTimeout(wait, 100, pth, call);
+        setTimeout(wait, 2000, pth, call);
     }
 }
 function processing(name, w, h, call) {

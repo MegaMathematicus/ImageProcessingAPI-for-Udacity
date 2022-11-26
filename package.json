@@ -8,7 +8,7 @@
     "eslint": "eslint src/**/*.ts",
     "build": "npx tsc",
     "jasmine": "jasmine",
-    "start": "node build/app.js",
+    "start": "nodemon build/app.js",
     "test": "npm run build && npm run jasmine",
     "orient": "npm run prettier && npm run eslint",
     "go": "npm run build && npm run start"

@@ -25,10 +25,10 @@ describe('Testeng processing', () => {
 			console.log('Done Processing');
 		});
 	});
-	it('finds if the image is processed', async () => {
+	it('finds if the image is processed', () => {
 		setTimeout(() => {
 			expect(fs.existsSync('media/thumb/abcd100x100.jpg')).toBeTrue();
-		}, 3000);
+		}, 4000);
 	});
 	afterAll(() => {
 		fs.unlink('media/original/abcd.jpg', () => {
