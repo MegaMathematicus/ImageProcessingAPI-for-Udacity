@@ -19,6 +19,12 @@ function processing(
 		const pathIn = `media/original/${name}.jpg`;
 		const pathOut = `media/thumb/${name}${w}x${h}.jpg`;
 		const dims: [number, number] = [parseInt(w), parseInt(h)];
+		if (!fs.existsSync('media/thumb/')) {
+			fs.mkdirSync('media/thumb/');
+		}
+		if (!fs.existsSync('media/original/')) {
+			fs.mkdirSync('media/original/');
+		}
 		sharp(pathIn)
 			.resize(dims[0], dims[1])
 			.toFile(pathOut, (error) => {

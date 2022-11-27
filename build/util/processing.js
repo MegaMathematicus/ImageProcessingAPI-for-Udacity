@@ -18,6 +18,12 @@ function processing(name, w, h, call) {
         var pathIn = "media/original/".concat(name, ".jpg");
         var pathOut = "media/thumb/".concat(name).concat(w, "x").concat(h, ".jpg");
         var dims = [parseInt(w), parseInt(h)];
+        if (!fs_1.default.existsSync('media/thumb/')) {
+            fs_1.default.mkdirSync('media/thumb/');
+        }
+        if (!fs_1.default.existsSync('media/original/')) {
+            fs_1.default.mkdirSync('media/original/');
+        }
         (0, sharp_1.default)(pathIn)
             .resize(dims[0], dims[1])
             .toFile(pathOut, function (error) {
