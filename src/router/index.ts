@@ -5,7 +5,7 @@ import pipe from './util/pipe';
 import valid from './util/true-params';
 const router = express.Router();
 
-router.get('/', valid, exists, process, pipe, () => {
+router.get('/', exists, valid, process, pipe, () => {
 	console.log('ended');
 });
 

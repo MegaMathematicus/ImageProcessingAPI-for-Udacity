@@ -12,6 +12,8 @@ const checker = (
 			`media/thumb/${req.query.name}${req.query.w}x${req.query.h}.jpg`
 		)
 	) {
+		// This is supposed to output the image directly if it exists.
+		// I think it works proberly as it doesn't take the time needed to reprocess
 		res.type('jpg');
 		sharp(
 			`media/thumb/${req.query.name}${req.query.w}x${req.query.h}.jpg`

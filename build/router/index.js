@@ -9,7 +9,7 @@ var process_1 = __importDefault(require("./util/process"));
 var pipe_1 = __importDefault(require("./util/pipe"));
 var true_params_1 = __importDefault(require("./util/true-params"));
 var router = express_1.default.Router();
-router.get('/', true_params_1.default, does_exist_1.default, process_1.default, pipe_1.default, function () {
+router.get('/', does_exist_1.default, true_params_1.default, process_1.default, pipe_1.default, function () {
     console.log('ended');
 });
 exports.default = router;
