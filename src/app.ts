@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static('media'));
 
 app.use('/api', index);
-app.get('*', (req, res) => {
+app.get('*', (req: express.Request, res: express.Response) => {
 	res.send(
 		'Not a valid rout. please use http://localhost:3000/api?name=fileName&h=height&w=width'
 	);
